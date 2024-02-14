@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$header-color: #0b0121;
+$text-button-color: #ececec;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #ececec;
+}
+
+body {
+  background-image: url(../media/body-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $text-button-color;
+  font-family: "Montserrat", sans-serif;
+  font-weight:  300;
+
+  a {
+    text-decoration: none;
+    color: $text-button-color;
+  }
+}
+
+header {
+  background-color: $header-color;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  
+
+  .logo {
+    margin-top: 10px;
+  }
+  a {
+    margin-right: 32px;
+  }
+
+  .dark_button {
+    @include button();
+  }
+
+  .light_button {
+    @include button();
+    background-color: $text-button-color;
+    color: #0b0121;
+  }
+
+  
+ 
+.hamburger-menu {
+  display: none;  
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+
+ 
+@media (max-width: 900px) {
+  nav {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #ececec;
+    margin: 5px;
+  }
+}
+
+}

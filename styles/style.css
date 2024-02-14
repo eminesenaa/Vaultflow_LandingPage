@@ -1,1 +1,75 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../media/body-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ececec;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+body a {
+  text-decoration: none;
+  color: #ececec;
+}
+
+header {
+  background-color: #0b0121;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+header .logo {
+  margin-top: 10px;
+}
+header a {
+  margin-right: 32px;
+}
+header .dark_button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #ececec;
+}
+header .light_button {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #ececec;
+  background-color: #ececec;
+  color: #0b0121;
+}
+header .hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+header .line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+}
+@media (max-width: 900px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .hamburger-menu {
+    display: flex;
+  }
+  header .line {
+    width: 30px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #ececec;
+    margin: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
