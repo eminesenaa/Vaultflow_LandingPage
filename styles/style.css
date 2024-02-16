@@ -120,4 +120,25 @@ header .line {
   background-color: #ececec;
   color: #0b0121;
   margin-right: 8px;
+}
+
+.logo_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.logo_title p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.logo_title .logos {
+  top: 50%;
+  left: 50%;
+  margin: 50px;
+}
+.logo_title .logos img {
+  cursor: pointer;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -136,3 +136,24 @@ header {
     margin-right: 8px;
   }
 }
+
+.logo_title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  p{
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  .logos{
+    top: 50%;
+    left: 50%;
+    margin: 50px;
+    img{
+      cursor: pointer;
+      width:  100%; 
+    }
+  }
+}
