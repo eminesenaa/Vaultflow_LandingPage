@@ -22,7 +22,7 @@ body {
   background-size: cover;
   color: $text-button-color;
   font-family: "Montserrat", sans-serif;
-  font-weight:  300;
+  font-weight: 300;
 
   a {
     text-decoration: none;
@@ -37,11 +37,11 @@ header {
   align-items: center;
   justify-content: space-around;
   padding: 20px;
-  
 
   .logo {
     margin-top: 10px;
   }
+
   a {
     margin-right: 32px;
   }
@@ -53,41 +53,86 @@ header {
   .light_button {
     @include button();
     background-color: $text-button-color;
-    color: #0b0121;
+    color: $header-color;
   }
 
-  
- 
-.hamburger-menu {
-  display: none;  
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.line {
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  margin: 5px;
-}
-
- 
-@media (max-width: 900px) {
-  nav {
-    display: none; 
-    flex-direction: column;
-    align-items: center;
-  }
   .hamburger-menu {
-    display: flex;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
   }
+
   .line {
     width: 30px;
     height: 3px;
-    border-radius: 20px;
-    background-color: #ececec;
+    background-color: black;
     margin: 5px;
+  }
+
+  @media (max-width: 900px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hamburger-menu {
+      display: flex;
+    }
+    .line {
+      width: 30px;
+      height: 3px;
+      border-radius: 20px;
+      background-color: #ececec;
+      margin: 5px;
+    }
   }
 }
 
+.hero_stack {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    color: $text-button-color;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 170px 20px 80px;
+    p:nth-child(1) {
+      opacity: 0.9;
+    }
+    p:nth-child(2) {
+      opacity: 0.65;
+    }
+  }
+
+  .text {
+    margin: 40px 0px;
+    line-height: 1.5;
+    color: rgb(167, 161, 161);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  .img_wrapper {
+    top: 50%;
+    left: 50%;
+    margin-top: 60px;
+    img {
+      width: 60%;
+    }
+  }
+  .dark_button {
+    @include button();
+    margin-left: 8px;
+  }
+
+  .light_button {
+    @include button();
+    background-color: $text-button-color;
+    color: #0b0121;
+    margin-right: 8px;
+  }
 }
