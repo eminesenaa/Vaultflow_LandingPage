@@ -112,6 +112,7 @@ header .line {
   border-radius: 50px;
   border: 1px solid #ececec;
   margin-left: 8px;
+  cursor: pointer;
 }
 .hero_stack .light_button {
   padding: 8px 20px;
@@ -141,4 +142,83 @@ header .line {
 .logo_title .logos img {
   cursor: pointer;
   width: 100%;
+}
+
+.section-title {
+  text-align: center;
+  top: 50%;
+  right: 50%;
+}
+.section-title p:first-child {
+  margin: auto;
+  padding: 45px;
+  width: 28%;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.section-title p:nth-child(2) {
+  width: 23%;
+  margin: auto;
+  line-height: 1.5rem;
+  margin-bottom: 80px;
+}
+
+.grid-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 400px;
+  grid-template-columns: 50%;
+  width: 75%;
+  margin: auto;
+  gap: 40px;
+}
+.grid-area a {
+  text-decoration: underline;
+}
+.grid-area .area {
+  position: relative;
+  border: #ececec;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  flex-direction: column;
+  text-align: left;
+  overflow: auto;
+  height: 100%;
+}
+.grid-area .area .content {
+  padding: 0px 40px;
+}
+.grid-area .area p:first-child {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.grid-area .area a {
+  margin-bottom: 20px;
+}
+.grid-area .area:nth-child(3) {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+}
+.grid-area .area:nth-child(4) {
+  grid-column: 1/3;
+  text-align: center;
+}
+.grid-area .area:nth-child(4) p:first-child {
+  width: 50%;
+  margin: auto;
+  padding: 50px;
+}
+.grid-area .area:nth-child(4) p:nth-child(2) {
+  width: 50%;
+  margin: auto;
+  line-height: 1.5rem;
+  padding-bottom: 40px;
+}
+.grid-area .area:nth-child(4) a {
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #ececec;
+  text-decoration: none;
+  padding: 15px;
 }/*# sourceMappingURL=style.css.map */
