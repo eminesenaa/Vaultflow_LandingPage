@@ -56,7 +56,7 @@ header .line {
   background-color: black;
   margin: 5px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   header nav {
     display: none;
     flex-direction: column;
@@ -221,4 +221,23 @@ header .line {
   border: 1px solid #ececec;
   text-decoration: none;
   padding: 15px;
+}
+
+footer {
+  margin: 80px auto;
+  width: 73%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+footer .column {
+  flex: 1;
+}
+footer .column:nth-child(2) {
+  margin-left: 15%;
+}
+footer img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
