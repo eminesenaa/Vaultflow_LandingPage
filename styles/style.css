@@ -240,4 +240,20 @@ footer img {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 1024px) {
+  .grid-area {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-area .area {
+    min-height: 400px;
+  }
+  .grid-area .area:nth-child(3) {
+    flex-direction: column;
+  }
+  .grid-area .area:nth-child(3) .right {
+    margin: auto;
+  }
 }/*# sourceMappingURL=style.css.map */

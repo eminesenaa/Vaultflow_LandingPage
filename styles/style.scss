@@ -261,3 +261,22 @@ footer {
     right: 0;
   }
 }
+
+@media (max-width: 1024px) {
+  .grid-area {
+    display: flex;
+    flex-direction: column;
+    .area {
+      min-height: 400px;
+    }
+
+    .area:nth-child(3) {
+      flex-direction: column;
+      .right {
+        margin: auto;
+      }
+    }
+
+    
+  }
+}
