@@ -99,7 +99,8 @@ header {
     font-size: 5rem;
     font-weight: 500;
     line-height: 1;
-    padding: 170px 20px 80px;
+    padding: 5% 4%;
+    font-size: 4rem;
     p:nth-child(1) {
       opacity: 0.9;
     }
@@ -109,7 +110,7 @@ header {
   }
 
   .text {
-    margin: 40px 0px;
+    padding: 30px 0px;
     line-height: 1.5;
     color: rgb(167, 161, 161);
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -143,30 +144,54 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
   margin-top: 50px;
+  margin: auto;
   p {
     font-size: 1.25rem;
     line-height: 1.6;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: center;
   }
   .logos {
-    top: 50%;
-    left: 50%;
-    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: auto;
+    .up,
+    .down {
+      gap: 10px;
+      padding: 10px;
+      max-width: 100%;
+      overflow: auto;
+      display: flex;
+      width: fit-content;
+      padding: 3%;
+    }
+
     img {
       cursor: pointer;
-      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    img:last-child {
+      margin-right: 0px;
     }
   }
 }
 
-.section-title {
+.section {
   text-align: center;
   top: 50%;
   right: 50%;
   p:first-child {
     margin: auto;
     padding: 45px;
-    width: 28%;
+    width: 50%;
     font-size: 3rem;
     font-weight: 500;
   }
@@ -197,7 +222,7 @@ header {
     border-radius: 30px;
     flex-direction: column;
     text-align: left;
-   overflow: hidden;
+    overflow: hidden;
     height: 100%;
     padding: 0px 0px 40px;
 
@@ -219,10 +244,11 @@ header {
     grid-column: 1/3;
     display: flex;
     flex-direction: row;
-    .left, .right{
+    .left,
+    .right {
       display: inline;
       width: 50%;
-    }  
+    }
   }
 
   .area:nth-child(4) {
@@ -271,98 +297,369 @@ footer {
   }
 }
 
-@media screen and (max-width: 1230px)  {
+@media screen and (max-width: 1230px) {
   .grid-area {
     display: flex;
     flex-direction: column;
     .area {
-      
       min-height: 400px;
     }
 
     .area:nth-child(3) {
       flex-direction: column;
-      .right   {
+      .right {
         width: 100%;
         text-align: center;
-       
       }
-      .left{
+      .left {
         width: 100%;
-        
-          }
+      }
     }
-    
-    
   }
 }
 
 @media screen and (max-width: 960px) {
   .grid-area {
-    
     .area:nth-child(4) {
       text-align: center;
       height: fit-content;
       padding: auto;
-       p:first-child {
-         width: 100%;
-         margin: auto;
-       }
-   
-       p:nth-child(2) {
-         width: 100%;
-         margin: auto;
-         line-height: 1rem;
-         padding : 10px 40px;
-         padding-bottom: 40px;
-       }
-       a {
-         padding: 10px;
-         margin: 10px 50px;
-         width: 5%;
-         line-height: 1rem;
- 
-         
-       }
-   
-      
-     }
+      p:first-child {
+        width: 100%;
+        margin: auto;
+      }
+
+      p:nth-child(2) {
+        width: 100%;
+        margin: auto;
+        line-height: 1rem;
+        padding: 10px 40px;
+        padding-bottom: 40px;
+      }
+      a {
+        padding: 10px;
+        margin: 10px 50px;
+        width: 5%;
+        line-height: 1rem;
+      }
+    }
   }
 }
 
-
 @media screen and (max-width: 718px) {
   .grid-area {
-    .area:nth-child(3){
-      .right{
-      
+    .area:nth-child(3) {
+      .right {
         display: none;
       }
-    } 
+    }
   }
 }
 
 @media screen and (max-width: 635px) {
   .grid-area {
-    .area{
+    .area {
       padding: 0px 0px 40px;
-      
-    } 
+    }
   }
 }
 
 @media screen and (max-width: 360px) {
   .grid-area {
-    .area:nth-child(4){
+    .area:nth-child(4) {
       text-align: left;
       height: fit-content;
       width: 100%;
-    a{
-      display: none;
+      font-size: smaller;
+      p:first-child {
+        padding-left: 40px;
+      }
+
+      .dark_button {
+        display: block;
+        text-align: center;
+        width: fit-content;
+      }
     }
-     
-   
-    } 
+  }
+}
+.hero_stack {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $text-button-color;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 5% 4%;
+  font-size: 4rem;
+}
+
+.title p:nth-child(1) {
+  opacity: 0.9;
+}
+
+.title p:nth-child(2) {
+  opacity: 0.65;
+}
+
+.text {
+  padding: 30px 0px;
+  line-height: 1.5;
+  color: rgb(167, 161, 161);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.img_wrapper {
+  top: 50%;
+  left: 50%;
+  margin-top: 60px;
+}
+
+.img_wrapper img {
+  width: 60%;
+}
+
+.dark_button {
+  @include button();
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.light_button {
+  @include button();
+  background-color: $text-button-color;
+  color: #0b0121;
+  margin-right: 8px;
+}
+
+/* Responsiveler */
+@media screen and (max-width: 768px) {
+  .hero_stack {
+    flex-direction: column;
+  }
+
+  .img_wrapper img {
+    width: 100%;
   }
 }
 
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .text {
+    padding: 15px 0px;
+  }
+
+  .img_wrapper {
+    margin-top: 30px;
+  }
+}
+
+.logo_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 50px;
+  margin: auto;
+}
+
+.logo_title p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: auto;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.logos .up,
+.logos .down {
+  gap: 10px;
+  padding: 10px;
+  max-width: 100%;
+  overflow: auto;
+  display: flex;
+  width: fit-content;
+  padding: 3%;
+}
+
+.logos img {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+
+.logos img:last-child {
+  margin-right: 0px;
+}
+
+/* Responsiveler */
+@media screen and (max-width: 768px) {
+  .logo_title {
+    width: 100%;
+  }
+
+  .logos .up,
+  .logos .down {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo_title p {
+    font-size: 1rem;
+  }
+
+  .logos .up,
+  .logos .down {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section p:first-child {
+    width: 70%;
+    font-size: 2rem;
+  }
+
+  .section p:nth-child(2) {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section p:first-child {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .section p:nth-child(2) {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .column {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .footer img {
+    position: static;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    width: 90%;
+  }
+
+  .footer .column {
+    width: 100%;
+  }
+
+  .footer .column:nth-child(2) {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .hero_stack {
+    .dark_button,
+    .light_button {
+      display: block;
+      margin-bottom: 10px;
+      text-align: center;
+      width: fit-content;
+    }
+  }
+
+  .actions {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .section {
+    .section-title {
+      p {
+        padding-left: 5px;
+        margin-left: 5px;
+        text-align: left;
+      }
+    }
+  }
+  .hero_stack {
+    p {
+      text-align: left;
+    }
+    .text {
+      text-align: left;
+    }
+    .title {
+      font-size: 30px;
+    }
+
+    a {
+      font-size: smaller;
+    }
+
+    .dark_button {
+      margin: 0;
+    }
+  }
+
+  .actions {
+    margin: auto;
+  }
+
+  footer {
+    font-size: medium;
+  }
+
+  .logo_title {
+    p {
+      text-align: left;
+    }
+  }
+
+  .logos{
+    .up, .down{
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      img{
+        padding: 0px;
+        margin: 0px;
+      }
+    }
+  }
+}
